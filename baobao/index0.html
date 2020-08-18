@@ -1,0 +1,238 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">v
+		<title>Happy Eery day</title>
+		<link rel="icon" href="images/keke.ico" type="image/x-icon">
+		<!--   <audio src="images/武汉吉他联盟 哥特 - 《星星小夜曲》-木吉他独奏.mp3" autoplay="autoplay"></audio> -->
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/iconfont.css" rel="stylesheet" />
+		<style type="text/css">
+			#alertBtns,
+			#alertBtn,
+			#alertBtnsC {
+				float: left;
+				margin-left: 30px;
+			}
+
+			#alertBtnsD {
+				margin-left: 30px;
+			}
+
+			.mui-table-view {
+				margin-top: 15px;
+			}
+		</style>
+	</head>
+
+	<body>
+	
+			
+	
+		<div id="slider" class="mui-slider" >
+			<div class="mui-slider-group mui-slider-loop">
+				<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+				<div class="mui-slider-item mui-slider-item-duplicate">
+					<a href="#">
+						<img src="images/m6.jpg">
+					</a>
+				</div>
+				<div class="mui-slider-item mui-slider-item-duplicate">
+					<a href="#">
+						<img src="images/b4.jpg">
+					</a>
+				</div>
+
+				<!-- 第一张 -->
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="images/b1.jpg">
+					</a>
+				</div>
+				<!-- 第二张 -->
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="images/b2.jpg">
+					</a>
+				</div>
+				<!-- 第三张 -->
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="images/b3.jpg">
+					</a>
+				</div>
+				<!-- 第四张 -->
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="images/b4.jpg">
+					</a>
+				</div>
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="images/b5.jpg">
+					</a>
+				</div>
+				<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+				<div class="mui-slider-item mui-slider-item-duplicate">
+					<a href="#">
+						<img src="images/b6.jpg">
+					</a>
+				</div>
+			</div>
+			<div class="mui-slider-indicator">
+				<div class="mui-indicator mui-active"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+			</div>
+		</div>
+
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			window.onload = function() {
+				mui.init();
+				mui('body').on('tap', 'a', function() {
+					document.location.href = this.href;
+				})
+				var gallery = mui('.mui-slider');
+				gallery.slider({
+					interval: 3000 //自动轮播周期，若为0则不自动播放，默认为0；
+				});
+				var info = document.getElementById("info");
+				document.getElementById("alertBtn").addEventListener('tap', function() {
+					mui.alert('我想携你游遍世界各地', '宝宝', function() {
+						//      info.innerText = '你刚关闭了警告框';
+					});
+				});
+				var infos = document.getElementById("infos");
+				document.getElementById("alertBtns").addEventListener('tap', function() {
+					mui.alert('你愿意爱我一生一世吗', '宝宝', function() {
+						//      info.innerText = '你刚关闭了警告框';
+					});
+				});
+				var infosC = document.getElementById("infosC");
+				document.getElementById("alertBtnsC").addEventListener('tap', function() {
+					mui.alert('我离不开你了', '宝宝', function() {
+						//      info.innerText = '你刚关闭了警告框';
+					});
+				});
+				var infosD = document.getElementById("infosD");
+				document.getElementById("alertBtnsD").addEventListener('tap', function() {
+					mui.alert('你愿意嫁给我嘛', '宝宝', function() {
+						//      info.innerText = '你刚关闭了警告框';
+					});
+				});
+			}
+		</script>
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item mui-active" href="index5.html">
+				<span class="mui-icon iconfont icon-bu" style="color:#929292;"></span>
+				<span class="mui-tab-label" style="color:#929292;">I</span>
+			</a>
+			<a class="mui-tab-item" href="index2.html">
+				<span class="mui-icon iconfont icon-jiandao"></span>
+				<span class="mui-tab-label">Iove</span>
+			</a>
+			<a class="mui-tab-item" href="index0.html">
+				<span class="mui-icon iconfont  icon-shitou" style="color: #007AFF;"></span>
+				<span class="mui-tab-label" style="color: #007AFF;">You</span>
+			</a>
+		</nav>
+		<p style="color: royalblue;font-size: 20px;margin-top: 12px;">宝宝,认识你这麽久,还没让你做过选择:</p>
+
+		<button style="
+	margin-left: 60px;" id='alertBtn' type="button" class="mui-btn mui-btn-blue mui-btn-outlined">A</button>
+		<div id="info"></div>
+		<button id='alertBtns' type="button" class="mui-btn mui-btn-blue mui-btn-outlined">B</button>
+		<div id="infos"></div>
+		<button id='alertBtnsC' type="button" class="mui-btn mui-btn-blue mui-btn-outlined">C</button>
+		<div id="infosC"></div>
+		<button id='alertBtnsD' type="button" class="mui-btn mui-btn-blue mui-btn-outlined">D</button>
+		<div id="infosD"></div>
+
+		<ul class="mui-table-view">
+			<!-- <li class="mui-table-view-cell mui-collapse">
+        <a class="mui-navigate-right" href="#">美美</a>
+        <div class="mui-collapse-content">
+        
+    </div>
+    </li> -->
+			<li class="mui-table-view-cell mui-collapse">
+				<a class="mui-navigate-right" href="#">宝宝,我想大声告诉你:</a>
+				<div class="mui-collapse-content">
+					<p style="color:pink;">I love you</p>
+					<p style="color:crimson;">我真的超级超级爱你</p>
+					<p style="color:palevioletred;">你就是我的小公举</p>
+					<p style="color:brown;">接下来就让我好好宠你</p>
+					<p style="color:crimson;">么么哒比心</p>
+				</div>
+			</li>
+
+		</ul>
+			
+		<button style="display:block;margin:0 auto;margin-top: 40px;color: crimson;" type="button" onclick="showFlower();hideFolwer()" id="form-button">我要亲亲~</button>
+		<canvas style="width: 370px; height: 400px;" id="c"></canvas>
+		<script>
+			var b = document.body;
+			var c = document.getElementsByTagName('canvas')[0];
+			var a = c.getContext('2d');
+			document.body.clientWidth;
+		</script>
+		<script>
+			with(m = Math) C = cos, S = sin, P = pow, R = random;
+			c.width = c.height = f = 500;
+			h = -250;
+
+			function p(a, b, c) {
+				if (c > 60) return [S(a * 7) * (13 + 5 / (.2 + P(b * 4, 4))) - S(b) * 50, b * f + 50, 625 + C(a * 7) * (13 + 5 / (
+					.2 + P(b * 4, 4))) + b * 400, a * 1 - b / 2, a];
+				A = a * 2 - 1;
+				B = b * 2 - 1;
+				if (A * A + B * B < 1) {
+					if (c > 37) {
+						n = (j = c & 1) ? 6 : 4;
+						o = .5 / (a + .01) + C(b * 125) * 3 - a * 300;
+						w = b * h;
+						return [o * C(n) + w * S(n) + j * 610 - 390, o * S(n) - w * C(n) + 550 - j * 350, 1180 + C(B + A) * 99 - j * 300,
+							.4 - a * .1 + P(1 - B * B, -h * 6) * .15 - a * b * .4 + C(a + b) / 5 + P(C((o * (a + 1) + (B > 0 ? w : -w)) /
+								25), 30) * .1 * (1 - B * B), o / 1e3 + .7 - o * w * 3e-6
+						]
+					}
+					if (c > 32) {
+						c = c * 1.16 - .15;
+						o = a * 45 - 20;
+						w = b * b * h;
+						z = o * S(c) + w * C(c) + 620;
+						return [o * C(c) - w * S(c), 28 + C(B * .5) * 99 - b * b * b * 60 - z / 2 - h, z, (b * b * .3 + P((1 - (A * A)),
+							7) * .15 + .3) * b, b * .7]
+					}
+					o = A * (2 - b) * (80 - c * 2);
+					w = 99 - C(A) * 120 - C(b) * (-h - c * 4.9) + C(P(1 - b, 7)) * 50 + c * 2;
+					z = o * S(c) + w * C(c) + 700;
+					return [o * C(c) - w * S(c), B * 99 - C(P(b, 7)) * 50 - c / 3 - z / 1.35 + 450, z, (1 - b / 1.2) * .9 + a * .1, P(
+						(1 - b), 20) / 4 + .05]
+				}
+			}
+			// setInterval(
+			// 	'for(i=0;i<1e4;i++)if(s=p(R(),R(),i%46/.74)){z=s[2];x=~~(s[0]*f/z-h);y=~~(s[1]*f/z-h);if(!m[q=y*f+x]|m[q]>z)m[q]=z,a.fillStyle="rgb("+~(s[3]*h)+","+~(s[4]*h)+","+~(s[3]*s[3]*-80)+")",a.fillRect(x,y,1,1)}',
+			// 	0)
+			//执行展示花的定时器
+			function showFlower() {
+				setInterval(
+					'for(i=0;i<1e4;i++)if(s=p(R(),R(),i%46/.74)){z=s[2];x=~~(s[0]*f/z-h);y=~~(s[1]*f/z-h);if(!m[q=y*f+x]|m[q]>z)m[q]=z,a.fillStyle="rgb("+~(s[3]*h)+","+~(s[4]*h)+","+~(s[3]*s[3]*-80)+")",a.fillRect(x,y,1,1)}',
+					0)
+			}
+			//隐藏button按钮
+			function hideFolwer() {
+				document.getElementById("form-button").style.display = 'none'
+			}
+		</script>
+	
+  
+	</body>
+
+</html>
